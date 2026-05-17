@@ -1,18 +1,16 @@
 FROM python:3.11-slim
 
-# Install uv
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /usr/local/bin/uv
 
 WORKDIR /app
 
-# Copy dependency files first (cached layer)
 COPY pyproject.toml uv.lock* ./
 
-# Install dependencies into the system python (no venv inside Docker)
 RUN uv sync --frozen --no-dev --no-editable
 
-# Copy application code
 COPY ./app ./app
+
+ENV PYTHONPATH=/app
 
 EXPOSE 8001
 
