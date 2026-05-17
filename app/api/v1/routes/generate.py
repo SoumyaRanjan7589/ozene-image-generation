@@ -3,9 +3,9 @@ from typing import List, Optional
 from fastapi import APIRouter, File, Form, HTTPException, UploadFile, status
 from fastapi.responses import JSONResponse
 
-from core.config import settings
-from schemas.response import ErrorResponse, GenerationData, SuccessResponse
-from services.fal_services import generate_images
+from app.core.config import settings
+from app.schemas.response import ErrorResponse, GenerationData, SuccessResponse
+from app.services.fal_services import generate_images
 
 router = APIRouter()
 

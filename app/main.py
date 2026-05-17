@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
-from core.config import settings
+from app.core.config import settings
 from app.api.v1.routes.generate import router as generate_router
 
 # settings = Settings()

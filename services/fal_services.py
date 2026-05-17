@@ -10,7 +10,7 @@ import uuid
 import random
 from typing import List
 
-from schemas.response import GeneratedImage
+from app.schemas.response import GeneratedImage
 
 PRICE_PER_MP_USD = 0.03  # flux-2-pro/edit pricing
 

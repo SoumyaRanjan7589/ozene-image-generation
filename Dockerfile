@@ -10,7 +10,7 @@ RUN uv sync --frozen --no-dev --no-editable
 
 COPY ./app ./app
 
-ENV PYTHONPATH=/app/app
+ENV PYTHONPATH=/app
 
 EXPOSE 8001
 
